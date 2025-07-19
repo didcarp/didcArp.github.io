@@ -11,7 +11,7 @@ fetch('data.json')
     // 🔸 Створюємо заголовки
     columns.forEach(col => {
       const th = document.createElement('th');
-      th.textContent = `${col.title} ❓`;
+      th.textContent = `${col.title}`;
       th.title = col.tooltip || '';
       th.style.cursor = 'help';
       tableHeadRow.appendChild(th);
