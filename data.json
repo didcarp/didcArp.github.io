@@ -1,0 +1,22 @@
+{
+  "columns": [
+    { "key": "name",   "title": "Імʼя",   "tooltip": "Повне імʼя користувача", "type": "text" },
+    { "key": "age",    "title": "Вік",    "tooltip": "Вік у роках",            "type": "text" },
+    { "key": "city",   "title": "Місто",  "tooltip": "Місто проживання",       "type": "text" },
+    { "key": "emoji",  "title": "Емодзі", "tooltip": "Настрій або суть",       "type": "emoji" },
+    { "key": "image",  "title": "Фото",   "tooltip": "Фото користувача",       "type": "image" },
+    { "key": "audio",  "title": "Аудіо",  "tooltip": "Голос/звук",             "type": "audio" },
+    { "key": "video",  "title": "Відео",  "tooltip": "Коротке відео",          "type": "video" }
+  ],
+  "rows": [
+    {
+      "name": "Олексій",
+      "age": 28,
+      "city": "Київ",
+      "emoji": "🧠",
+      "image": "resouces/CommandEmotes/test.png",
+      "audio": "resouces/CommandEmotes/test.mp3",
+      "video": "resouces/CommandEmotes/test.mp4"
+    }
+  ]
+}
