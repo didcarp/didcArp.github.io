@@ -5,14 +5,14 @@ const tableBody = table.querySelector('tbody');
 fetch('data.json')
   .then(res => res.json())
   .then(data => {
-    const columns = data.Columns;
-    const rows = data.Rows;
+    const columns = data.columns;
+    const rows = data.rows;
 
     // 🔸 Створюємо заголовки
     columns.forEach(col => {
       const th = document.createElement('th');
-      th.textContent = `${col.Title}`;
-      th.title = col.ToolTip || '4543';
+      th.textContent = col.Title || col.Key;
+      th.title = col.ToolTip || '';
       th.style.cursor = 'help';
       tableHeadRow.appendChild(th);
     });
@@ -23,18 +23,19 @@ fetch('data.json')
 
       columns.forEach(col => {
         const td = document.createElement('td');
-        const value = rowData[col.key];
+        const value = rowData[col.Key];
+        const type = col.Type;
 
-        switch (col.type) {
-          case 'image':
+        switch (type) {
+          case 'Image':
             td.innerHTML = `<img src="${value}" alt="${rowData.name}" width="40" height="40" style="border-radius:50%;">`;
             break;
 
-          case 'emoji':
+          case 'Emoji':
             td.textContent = value || '❓';
             break;
 
-          case 'audio':
+          case 'Audio':
             td.innerHTML = `
               <audio controls preload="none" style="width: 100px;">
                 <source src="${value}" type="audio/mpeg">
@@ -42,7 +43,7 @@ fetch('data.json')
               </audio>`;
             break;
 
-          case 'video':
+          case 'Video':
             td.innerHTML = `
               <video width="120" height="80" controls preload="none" style="border-radius:8px;">
                 <source src="${value}" type="video/mp4">
