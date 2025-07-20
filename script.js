@@ -28,7 +28,7 @@ fetch('data.json')
 
         switch (type) {
           case 'Image':
-            td.innerHTML = `<img src="${value}" alt="${rowData.name}" width="40" height="40" style="border-radius:50%;">`;
+            td.innerHTML = `<img src="${value}" alt="${rowData.Name}" width="40" height="40" style="border-radius:50%;">`;
             break;
 
           case 'Emoji':

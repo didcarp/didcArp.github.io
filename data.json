@@ -1,17 +1,17 @@
 {
   "Сolumns": [
-    { "Key": "Name",	"Type": "Text",		"Title": "Назва",		"ToolTip": "Назва команди Emoji"},
-    { "Key": "Image",	"Type": "Image",	"Title": "Зображення",	"ToolTip": "Відображення команди в чаті"},
-	{ "Key": "Cost",	"Type": "Text",		"Title": "Ціна",		"ToolTip": "Ціна використання"},
-	{ "Key": "GCD",		"Type": "Text",		"Title": "ГВ",			"ToolTip": "Глобальне Відновлення в секундах"},
-	{ "Key": "UCD",		"Type": "Text",		"Title": "КВ",			"ToolTip": "Користувацьке відновлення для кожного окремо в секундах"},
-	{ "Key": "Audio",	"Type": "Audio",	"Title": "Звук",		"ToolTip": "Звуковий супровід команди"}
+  { "Key": "Name",	"Type": "Text",		"Title": "Назва",		    "ToolTip": "Назва команди Emoji"},
+  { "Key": "Image",	"Type": "Image",	"Title": "Зображення",	"ToolTip": "Відображення команди в чаті"},
+	{ "Key": "Cost",	"Type": "Text",		"Title": "Ціна",		    "ToolTip": "Ціна використання"},
+	{ "Key": "GCD",		"Type": "Text",		"Title": "ГВ",			    "ToolTip": "Глобальне Відновлення в секундах"},
+	{ "Key": "UCD",		"Type": "Text",		"Title": "КВ",			    "ToolTip": "Користувацьке відновлення для кожного окремо в секундах"},
+	{ "Key": "Audio",	"Type": "Audio",	"Title": "Звук",		    "ToolTip": "Звуковий супровід команди"}
   ],
   "Rows": [
     {
-      "Name": "50bb",
-      "Image": "resouces/CommandEmotes/test.png",
-      "Cost": "500",
+    "Name": "50bb",
+    "Image": "resouces/CommandEmotes/test.png",
+    "Cost": "500",
 	  "GCD": "0",
 	  "UCD": "0",
 	  "Audio": "resouces/CommandEmotes/test.mp3"
