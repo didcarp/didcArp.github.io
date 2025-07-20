@@ -5,8 +5,8 @@ const tableBody = table.querySelector('tbody');
 fetch('data.json')
   .then(res => res.json())
   .then(data => {
-    const columns = data.columns;
-    const rows = data.rows;
+    const columns = data.Columns;
+    const rows = data.Rows;
 
     // 🔸 Створюємо заголовки
     columns.forEach(col => {
