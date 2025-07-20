@@ -1,22 +1,20 @@
 {
-  "columns": [
-    { "key": "name",   "title": "Імʼя",   "tooltip": "Повне імʼя користувача", "type": "text" },
-    { "key": "age",    "title": "Вік",    "tooltip": "Вік у роках",            "type": "text" },
-    { "key": "city",   "title": "Місто",  "tooltip": "Місто проживання",       "type": "text" },
-    { "key": "emoji",  "title": "Емодзі", "tooltip": "Настрій або суть",       "type": "emoji" },
-    { "key": "image",  "title": "Фото",   "tooltip": "Фото користувача",       "type": "image" },
-    { "key": "audio",  "title": "Аудіо",  "tooltip": "Голос/звук",             "type": "audio" },
-    { "key": "video",  "title": "Відео",  "tooltip": "Коротке відео",          "type": "video" }
+  "Columns": [
+    { "Key": "Name",	"Type": "Text",		"Title": "Назва",		"ToolTip": "Назва команди Emoji"},
+    { "Key": "Image",	"Type": "Image",	"Title": "Зображення",	"ToolTip": "Відображення команди в чаті"},
+	{ "Key": "Cost",	"Type": "Text",		"Title": "Ціна",		"ToolTip": "Ціна використання"},
+	{ "Key": "GCD",		"Type": "Text",		"Title": "ГВ",			"ToolTip": "Глобальне Відновлення в секундах"},
+	{ "Key": "UCD",		"Type": "Text",		"Title": "КВ",			"ToolTip": "Користувацьке відновлення для кожного окремо в секундах"},
+	{ "Key": "Audio",	"Type": "Audio",	"Title": "Звук",		"ToolTip": "Звуковий супровід команди"}
   ],
   "rows": [
     {
-      "name": "Олексій",
-      "age": 28,
-      "city": "Київ",
-      "emoji": "🧠",
-      "image": "resouces/CommandEmotes/test.png",
-      "audio": "resouces/CommandEmotes/test.mp3",
-      "video": "resouces/CommandEmotes/test.mp4"
+      "Name": "50bb",
+      "Image": "resouces/CommandEmotes/test.png",
+      "Cost": "500",
+	  "GCD": "0",
+	  "UCD": "0",
+	  "Audio": "resouces/CommandEmotes/test.mp3"
     }
   ]
 }

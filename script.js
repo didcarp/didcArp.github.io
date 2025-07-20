@@ -5,14 +5,14 @@ const tableBody = table.querySelector('tbody');
 fetch('data.json')
   .then(res => res.json())
   .then(data => {
-    const columns = data.columns;
-    const rows = data.rows;
+    const columns = data.Columns;
+    const rows = data.Rows;
 
     // 🔸 Створюємо заголовки
     columns.forEach(col => {
       const th = document.createElement('th');
-      th.textContent = `${col.title}`;
-      th.title = col.tooltip || '';
+      th.textContent = `${col.Title}`;
+      th.title = col.ToolTip || '4543';
       th.style.cursor = 'help';
       tableHeadRow.appendChild(th);
     });
