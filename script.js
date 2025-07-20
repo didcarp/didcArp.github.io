@@ -9,7 +9,8 @@ fetch('data.json')
     const rows = data.Rows;
 
     // 🔸 Створюємо заголовки
-    columns.forEach(col => {
+    columns.forEach(col =>
+	{
       const th = document.createElement('th');
       th.textContent = col.Title || col.Key;
       th.title = col.ToolTip || '';
@@ -18,41 +19,47 @@ fetch('data.json')
     });
 
     // 🔸 Створюємо рядки
-    rows.forEach(rowData => {
+    rows.forEach(rowData =>
+	{
       const tr = document.createElement('tr');
 
-      columns.forEach(col => {
+      columns.forEach(col =>
+	  {
         const td = document.createElement('td');
         const value = rowData[col.Key];
         const type = col.Type;
 
-        switch (type) {
+        switch (type)
+		{
           case 'Image':
-            td.innerHTML = `<img src="${value}" alt="${rowData.Name}" width="40" height="40" style="border-radius:50%;">`;
+            td.innerHTML =
+			  `<img src="${value}" alt="${rowData.Name}" width="40" height="40" style="border-radius:50%;">`;
             break;
 
           case 'Emoji':
-            td.textContent = value || '❓';
+            td.textContent =
+			  value || '❓';
             break;
 
           case 'Audio':
-            td.innerHTML = `
-              <audio controls preload="none" style="width: 100px;">
+            td.innerHTML = 
+			  `<audio controls preload="none" style="width: 100%;">
                 <source src="${value}" type="audio/mpeg">
                 Ваш браузер не підтримує аудіо.
               </audio>`;
             break;
 
           case 'Video':
-            td.innerHTML = `
-              <video width="120" height="80" controls preload="none" style="border-radius:8px;">
+            td.innerHTML = 
+			  `<video width="120" height="80" controls preload="none" style="border-radius:8px;">
                 <source src="${value}" type="video/mp4">
                 Ваш браузер не підтримує відео.
               </video>`;
             break;
 
           default:
-            td.textContent = value !== undefined ? value : '—';
+            td.textContent =
+			  value !== undefined ? value : '—';
         }
 
         tr.appendChild(td);
@@ -61,7 +68,8 @@ fetch('data.json')
       tableBody.appendChild(tr);
     });
   })
-  .catch(err => {
+  .catch(err =>
+  {
     console.error('❌ Помилка завантаження:', err);
     tableBody.innerHTML = `<tr><td colspan="100%">Не вдалося завантажити дані</td></tr>`;
   });
